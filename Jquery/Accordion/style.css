@@ -1,0 +1,28 @@
+#accordion{
+    width: 400px;
+    margin: 0px auto;/*Equally set up margin on both side(left and right) */ 
+    border-bottom: 1px solid #990099;
+}
+
+#accordion h4{
+    background-color: #ff00ff;
+    border:1px solid #990099;
+    border-bottom: none;
+    margin:0px;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+#accordion h4:hover{
+    background-color:purple;
+
+}
+
+#accordion p{
+    background-color: lightblue;
+    border:1px solid #990099;
+    border-bottom: none;
+    margin:0px;
+    padding:15px;  
+}

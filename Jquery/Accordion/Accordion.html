@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#accordion p:not(:first)").hide();//Content based selector
+        $("#accordion h4").click(function(){
+            $(this).next().slideToggle(1000).siblings("p:visible").slideUp(1000);
+            //Sibling selection in DOM
+        });
+    });
+</script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>The World of Flowers</title>
+</head>
+<body>
+        <div id="accordion">
+            <h4>
+                First Section
+            </h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci aut in quos ipsam facere asperiores dolore fugiat veritatis voluptatem! Voluptates.</p>
+            <h4>
+                Second Section
+            </h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci aut in quos ipsam facere asperiores dolore fugiat veritatis voluptatem! Voluptates.</p>
+            <h4>
+                Third Section
+            </h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci aut in quos ipsam facere asperiores dolore fugiat veritatis voluptatem! Voluptates.</p>
+            <h4>
+                Fourth Section
+            </h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci aut in quos ipsam facere asperiores dolore fugiat veritatis voluptatem! Voluptates.</p>
+        </div>
+</body>
+</html>

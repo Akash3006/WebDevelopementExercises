@@ -1,0 +1,22 @@
+
+.container{
+    background-color: aquamarine;
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+    border: 5px blue;
+    display: none;   
+}
+
+p{
+    text-align: center;
+    border-top: 1px solid black;
+    border-radius: 10px;
+    width: 50px;
+    background-color: blue;
+    margin: 0 auto;
+}
+
+p:hover{
+    cursor: pointer;
+}

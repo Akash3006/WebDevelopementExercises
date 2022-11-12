@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        var interval;
+        //To start scrolling feeds
+        function start(){
+            $(".news li:first").slideUp(function(){
+                $(this).appendTo(".news").slideDown();
+            });
+        }
+
+        //To stop scrolling feed
+        function stop(){
+            clearInterval(interval);
+        }
+
+        $(document).ready(function(){
+
+           interval =  setInterval(start,2000);
+
+           $(".news").hover(function(){
+
+            stop();
+
+           },function(){
+            interval =  setInterval(start,2000);
+           });
+        });        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <ul class="news">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+    </ul>
+</body>
+</html>
