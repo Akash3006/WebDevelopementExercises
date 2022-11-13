@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            //1.Highlight all stars that are hovered over
+
+            $("li").mouseover(function(){
+                
+                var current = $(this);
+
+                $("li").each(function(index){ 
+
+                $(this).addClass("hovered-stars");
+
+                if(index == current.index())
+                    return false;
+
+            });
+            });
+
+            //2.Don't highlight once the mouse is withdrawn from stars
+
+            $("li").mouseleave(function(){
+                $("li").removeClass("hovered-stars");
+            });
+            
+
+            //3.Select all stars till the start selected
+            $("li").click(function(){
+
+                //Remove the highlighted
+                $("li").removeClass("clicked-stars");
+                //Color all the stars till selected 
+                $(".hovered-stars").addClass("clicked-stars");
+
+                var count = $(".clicked-stars").length;
+
+                $(".message").html("Thanks! you have rated it "+count+" stars");
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li><i class="fa fa-star fa-fw"></i></li>
+            <li><i class="fa fa-star fa-fw"></i></li>
+            <li><i class="fa fa-star fa-fw"></i></li>
+            <li><i class="fa fa-star fa-fw"></i></li>
+            <li><i class="fa fa-star fa-fw"></i></li>
+        </ul>
+        <div class="message">
+            Please rate your overall experience!
+        </div>
+    </div>
+</body>
+</html>
