@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnAdd").click(function(){
+                var newItem = $("#item").val();
+                if(newItem!=null)
+                {
+                    $("#list").append("<p><input type='checkbox'/> <span>"+newItem+"</span><span><i id='close' class='fa fa-window-close'></i></span></p>");
+                    $("#item").val("");
+                }
+            });
+            
+            $("body").on("click","#close",function(){
+                $(this).parent().remove();
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <div id="list">
+        <p>
+            <input type="checkbox"/>
+            <span>Lorem ipsum dolor sit amet.</span>
+            <span id="close"><i  class="fa fa-window-close"></i></span>
+        </p>
+        <p>
+            <input type="checkbox"/>
+            <span>Lorem ipsum dolor sit amet.</span>
+            <span id="close"><i  class="fa fa-window-close"></i></span>
+        </p>
+        <p>
+            <input type="checkbox"/>
+            <span>Lorem ipsum dolor sit amet.</span>
+            <span id="close"><i  class="fa fa-window-close"></i></span>
+        </p>
+    </div>
+    <div id="note">
+        <input type="text" id="item" placeholder="Add Note !"/>
+        <span><button id="btnAdd"><i class="fa fa-plus"></i></button></span>
+    </div>
+</body>
+</html>
