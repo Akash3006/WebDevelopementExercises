@@ -1,0 +1,29 @@
+.container{
+    width: 400px;
+    margin:50px auto;
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.hovered-stars{
+    color:yellow;
+}
+
+.clicked-stars{
+    color:orangered;
+}
+
+li{
+    font-size: 35px;
+    padding:5px;
+    color: #CCC;
+    display: inline;
+    list-style: none;
+}
+
+.message{
+    font-size: 20px;
+}
